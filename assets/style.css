@@ -1,0 +1,224 @@
+html {
+  font-size: 62.25%;
+}
+
+:root {
+  --black: #210124;
+  --red: #750d37;
+  --green: #b3dec1;
+  --blue: #e5fcf5;
+  --white: #fefffe;
+}
+* {
+  color: var(--black);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  border-color: 0.25rem solid black;
+
+  background-image: url(./body-background.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./header-square.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+nav {
+  font-weight: bolder;
+  position: relative;
+  display: inline;
+  padding-top: 0.5rem;
+  right: -22vw;
+  top: -37vh;
+  border-bottom: 0.5rem solid var(--red);
+  border-left: 1rem solid var(--red);
+  padding-bottom: 2rem;
+}
+
+header ul {
+  display: inline;
+  justify-content: space-between;
+}
+
+header nav li {
+  display: inline;
+  font-size: 2rem;
+  margin-left: 15rem;
+  color: var(--red);
+}
+h1 {
+  font-size: 10rem;
+  font-weight: bolder;
+}
+
+.no-margin {
+  margin-left: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about-me img {
+  width: 50%;
+  border-radius: 25%;
+}
+.about-me article {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  border: 0.25rem solid black;
+  background-color: var(--green);
+  border-radius: 25%;
+}
+
+.about-me h2 {
+  font-size: 6rem;
+  margin-bottom: 2%;
+}
+
+.about-me article div {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.about-me article div ul {
+  margin-right: 5rem;
+  margin-top: 6rem;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+.about-me article div ul li {
+  margin-bottom: 6rem;
+}
+
+/* SECTION COLUMN ARTICLES */
+
+.aside-by-sections {
+  display: flex;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 50%;
+  background-color: var(--white);
+  font-size: 5rem;
+}
+
+.column-articles {
+  display: flex;
+  flex-direction: column;
+}
+.column-articles article {
+  display: flex;
+  flex-direction: column;
+}
+article h3 {
+  font-size: 2rem;
+}
+.column-articles .my-projects div {
+  width: 50vw;
+  border: 0.25rem solid black;
+}
+.grid {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column-articles h4 {
+  font-size: 1.5rem;
+}
+.my-projects figure img {
+  width: 100%;
+  height: 15rem;
+}
+
+.work-experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-experience div {
+  display: flex;
+}
+
+.work-experience div figure {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.work-experience h5 {
+  font-size: 2rem;
+}
+.work-experience div figure ul {
+  display: flex;
+  flex-direction: column;
+}
+.work-experience-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.work-experience img {
+  width: 50%;
+  height: 20rem;
+}
+.education {
+  display: flex;
+  flex-direction: column;
+}
+.education div {
+  display: flex;
+  flex-direction: row;
+}
+
+.education figure {
+  width: 50%;
+  border: 0.25rem solid black;
+}
+.education h5 {
+  font-size: 2rem;
+}
+
+.ut-relative {
+  width: 50%;
+  height: 100%;
+}
+.ut-abs {
+  width: 50%;
+  height: 30rem;
+}
