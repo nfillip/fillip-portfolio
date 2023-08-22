@@ -40,7 +40,7 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
 }
-nav {
+header nav {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -67,29 +67,45 @@ header nav li {
 }
 
 header nav a {
-    text-decoration: none;
-    color: var(--red);
+  text-decoration: none;
+  color: var(--red);
 }
 
 header nav a:hover {
-    text-decoration: underline;
-    box-shadow: 0 0 10px #000 inset;
+  text-decoration: underline;
+  box-shadow: 0 0 10px #000 inset;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 100%;
+    
 }
 header h1 {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 10rem;
   font-weight: bolder;
-  height: 90%;
-  width: 100%;
+  text-align: center;
+  
 }
 
 .no-margin {
   margin-left: 2rem;
 }
 
-        
+@media screen and (width<900px) {
+    .phone-screen {
+        margin-left: 0;
+    }
+}
+
 /* MAIN */
 main {
   display: flex;
@@ -108,7 +124,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 0.5rem solid red;
 }
 .about-me img {
   height: 50rem;
@@ -116,7 +131,7 @@ main {
   border-radius: 25%;
   border: 2rem solid var(--red);
   margin: 5rem;
-  box-shadow: 1rem 1rem 1.5rem .2rem gray;
+  box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
 }
 .about-me article {
   height: 50rem;
@@ -129,13 +144,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 1rem 1rem 1.5rem .2rem gray;
+  box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
 }
 
 .about-me-textbox article h2 {
   font-size: 6rem;
   text-decoration: underline;
-  
 }
 
 .about-me-textbox article div {
@@ -149,12 +163,20 @@ main {
   padding-top: 4rem;
 }
 
-
 .bolder {
   font-weight: bolder;
 }
 .about-me-textbox li {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (width<1200px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* SECTION COLUMN ARTICLES */
@@ -162,10 +184,22 @@ margin-bottom: 2rem;
 .aside-by-sections {
   display: flex;
 }
+@media screen and (width<900px) {
+  .aside-by-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hidden-on-phone {
+    display: none;
+    visibility: hidden;
+  }
+}
 
 aside {
   display: flex;
-  
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -181,23 +215,20 @@ aside ul {
   text-align: left;
 }
 aside li {
-   
   text-align: left;
   margin-top: 3rem;
-
-  }
-
-  aside a {
-    text-decoration: none;
-  }
-aside li:hover {
-    box-shadow: 1rem 1rem 2rem .2rem gray;
 }
-  
-  aside a:hover::after {
-    
-    content: "🢠";
-  }
+
+aside a {
+  text-decoration: none;
+}
+aside li:hover {
+  box-shadow: 1rem 1rem 2rem 0.2rem gray;
+}
+
+aside a:hover::after {
+  content: "🢠";
+}
 /* MAIN SECTION */
 .column-articles {
   display: flex;
@@ -228,24 +259,40 @@ aside li:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media screen and (width<1200px) {
+  .grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width<800px) {
+  .grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+}
+
 .my-projects figure {
   display: flex;
   flex-direction: column;
   margin: 10% 10%;
   border: 0.25rem solid var(--black);
-  box-shadow: 1rem 1rem 1.5rem .2rem gray;
-  transition: all .2s ease-in-out;
+  box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
+  transition: all 0.2s ease-in-out;
 }
 
 .my-projects figure:hover {
-transform: scale(1.3);
+  transform: scale(1.3);
 }
 .column-articles h4 {
   font-size: 1.5rem;
 }
 .column-articles a {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 .my-projects figure img {
   width: 100%;
@@ -261,23 +308,30 @@ transform: scale(1.3);
 .work-experience-divwithtwospans {
   display: flex;
   width: 100%;
-  
+}
+
+@media screen and (width<1200px) {
+  .work-experience-divwithtwospans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .work-experience-twospans {
-    display: flex; 
-    flex-direction: column; 
-    width: 50%; 
-    height: 100%; 
-    
-    align-items: center;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+
+  align-items: center;
+  padding: 2rem;
 }
 .work-experience img {
   width: 35rem;
   height: 60rem;
-  box-shadow: 1rem 1rem 1.5rem .2rem gray;
-  
+  box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
 
   border: 2rem solid var(--red);
   border-radius: 20%;
@@ -293,14 +347,14 @@ transform: scale(1.3);
   border: 2rem solid var(--red);
   background-color: var(--green);
   border-radius: 20%;
-  box-shadow: 1rem 1rem 1.5rem .2rem gray;
+  box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
 }
 .figure-resume span {
   display: flex;
   flex-direction: column;
- justify-content: center;
+  justify-content: center;
   align-items: center;
-  
+
   background-color: var(--blue);
   border-radius: 20%;
   padding: 5%;
@@ -312,8 +366,6 @@ transform: scale(1.3);
 }
 .work-experience h5 {
   font-size: 2rem;
-
-  
 }
 .work-experience-list {
   display: flex;
@@ -340,38 +392,34 @@ transform: scale(1.3);
   flex-direction: column-reverse;
 }
 .education span {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    width: 100%;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .ut-me {
   width: 80rem;
   height: 60rem;
-  
-  
+
   border: 2rem solid var(--red);
   border-radius: 5%;
   margin-bottom: 2rem;
-  box-shadow: 1rem 1rem 1.5rem .2rem gray;
-  
+  box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
 }
 .education figure {
   display: flex;
-  flex-direction: row;;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
-  
+
   height: 20rem;
-  
 }
 .education-last-div {
-    display: flex;
-    flex-direction: column; 
+  display: flex;
+  flex-direction: column;
 }
 .education h4 {
   font-size: 4rem;
@@ -383,7 +431,7 @@ transform: scale(1.3);
 
 .ut-abs {
   width: 40rem;
-  height:32rem;
+  height: 32rem;
 }
 /* FOOTER SECTION */
 footer {
@@ -400,16 +448,15 @@ footer img {
   width: 30rem;
 
   border: 0.5rem solid var(--green);
-  
+
   border-radius: 5%;
 }
 /* FOOTER DIV CONTACT ME */
 
 footer span {
-    
-    width: 33%;
-    display: flex;
-    justify-content: center;
+  width: 33%;
+  display: flex;
+  justify-content: center;
 }
 footer div {
   display: flex;
@@ -423,6 +470,24 @@ footer figure {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+}
+
+@media screen and (width<1200px) {
+  footer figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (width<900px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 footer form {
   width: 100%;
@@ -455,16 +520,16 @@ button {
   margin-top: 3rem;
 }
 button:hover {
-    box-shadow: 0 0 5px #000 inset;
-    transform: scale(1.1); 
-    cursor: pointer;
+  box-shadow: 0 0 5px #000 inset;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* FOOTER: UL: LINKS */
 footer ul {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: var(--white);
   width: 100%;
   border: 0.25rem solid var(--green);
@@ -478,17 +543,16 @@ footer li {
   color: var(--white);
   font-size: 2.5rem;
   width: 100%;
-  
 }
 
 footer a {
-    width: 100%;
-    color: var(--white);
-    text-decoration: none;
+  width: 100%;
+  color: var(--white);
+  text-decoration: none;
 }
 footer li:hover {
-border-bottom: .5rem solid var(--green);
-font-size: 2.7rem;
+  border-bottom: 0.5rem solid var(--green);
+  font-size: 2.7rem;
 }
 
 footer h4 {
