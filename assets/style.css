@@ -133,7 +133,7 @@ aside {
   justify-content: center;
   text-align: left;
   width: 50%;
-  background-color: var(--white);
+  background-color: var(--green);
   font-size: 5rem;
 }
 
@@ -221,4 +221,54 @@ article h3 {
 .ut-abs {
   width: 50%;
   height: 30rem;
+}
+
+footer {
+    display: flex; 
+    flex-direction: row;
+    background-color: var(--black);
+    color: var(--white);
+}
+footer img {
+    height: 50rem;
+    width: 32%;
+    
+    border: .5rem solid var(--green)
+}
+footer h3 {
+    color: var(--white);
+    font-size: 4rem;
+}
+
+footer input {
+    font-size: 3rem;
+}
+footer input:hover {
+border: .1rem solid black;
+box-shadow: 0 0 5px #000 inset; 
+}
+
+footer form {
+    
+    width: 33%;
+    border: .25rem solid white;
+}
+
+button {
+    height: 10%;
+    width: 40%;
+    font-size: 3rem;
+    background-color: var(--blue);
+    color: var(--red);
+    border-radius: 50%;
+}
+footer ul{
+    color: var(--white);
+    width: 33%;
+    border: .25rem solid white;
+    font-size: 3rem;
+}
+footer li{
+    color: var(--white);
+    font-size: 2.5rem;
 }
