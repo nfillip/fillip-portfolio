@@ -1,7 +1,9 @@
+/* GENERIC SETTINGS */
 html {
   font-size: 62.25%;
 }
 
+/* SITE COLORS CREATED FROM A PALLETE GENERATOR  */
 :root {
   --black: #210124;
   --red: #750d37;
@@ -71,19 +73,19 @@ header nav a {
   color: var(--red);
 }
 
+/* the nav bar links get underlined and shadowed when you hover over them */
 header nav a:hover {
   text-decoration: underline;
   box-shadow: 0 0 10px #000 inset;
 }
 
 header div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 90%;
-    width: 100%;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 90%;
+  width: 100%;
 }
 header h1 {
   display: flex;
@@ -93,17 +95,17 @@ header h1 {
   font-size: 10rem;
   font-weight: bolder;
   text-align: center;
-  
 }
 
 .no-margin {
   margin-left: 2rem;
 }
 
+/* For Phone Screens: Nav bar moves to center of header */
 @media screen and (width<900px) {
-    .phone-screen {
-        margin-left: 0;
-    }
+  .phone-screen {
+    margin-left: 0;
+  }
 }
 
 /* MAIN */
@@ -169,7 +171,7 @@ main {
 .about-me-textbox li {
   margin-bottom: 2rem;
 }
-
+/* when screen width shrinks: the about me becomes a column */
 @media screen and (width<1200px) {
   .about-me {
     display: flex;
@@ -181,9 +183,11 @@ main {
 
 /* SECTION COLUMN ARTICLES */
 
+/* ASIDE */
 .aside-by-sections {
   display: flex;
 }
+/* when the screen shrinks the sections become a column */
 @media screen and (width<900px) {
   .aside-by-sections {
     display: flex;
@@ -191,6 +195,7 @@ main {
     justify-content: center;
     align-items: center;
   }
+  /* when screen shrinks to phone width, my aside bar disapears */
   .hidden-on-phone {
     display: none;
     visibility: hidden;
@@ -225,7 +230,7 @@ aside a {
 aside li:hover {
   box-shadow: 1rem 1rem 2rem 0.2rem gray;
 }
-
+/* when you hover over aside links, this little arrow pops up after it */
 aside a:hover::after {
   content: "🢠";
 }
@@ -239,6 +244,7 @@ aside a:hover::after {
   display: flex;
   flex-direction: column;
 }
+/* this is used for every title of each section */
 .column-articles h3 {
   font-size: 5rem;
   margin-left: 5rem;
@@ -251,14 +257,16 @@ aside a:hover::after {
 /* MY PROJECTS */
 .column-articles .my-projects div {
   width: 100%;
-  /* border: 0.25rem solid black; */
+  
 }
+/* grid template for my projects */
 .grid {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* for smaller width screens the # of columns on my grid decrease */
 @media screen and (width<1200px) {
   .grid {
     display: grid;
@@ -324,7 +332,6 @@ aside a:hover::after {
   flex-direction: column;
   width: 50%;
   height: 100%;
-
   align-items: center;
   padding: 2rem;
 }
@@ -332,7 +339,6 @@ aside a:hover::after {
   width: 35rem;
   height: 60rem;
   box-shadow: 1rem 1rem 1.5rem 0.2rem gray;
-
   border: 2rem solid var(--red);
   border-radius: 20%;
 }
@@ -354,7 +360,6 @@ aside a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-color: var(--blue);
   border-radius: 20%;
   padding: 5%;
@@ -399,10 +404,10 @@ aside a:hover::after {
   width: 100%;
 }
 
+/* photo of me at graduation */
 .ut-me {
   width: 80rem;
   height: 60rem;
-
   border: 2rem solid var(--red);
   border-radius: 5%;
   margin-bottom: 2rem;
@@ -429,10 +434,13 @@ aside a:hover::after {
   font-size: 3rem;
 }
 
+/* UT longhorns logo */
 .ut-abs {
   width: 40rem;
   height: 32rem;
 }
+
+
 /* FOOTER SECTION */
 footer {
   display: flex;
@@ -442,7 +450,7 @@ footer {
   height: 100%;
   padding: 3rem 2rem;
 }
-/* FOOTER IMAGE */
+/* me and the pug Piper */
 footer img {
   height: 50rem;
   width: 30rem;
@@ -451,7 +459,7 @@ footer img {
 
   border-radius: 5%;
 }
-/* FOOTER DIV CONTACT ME */
+/* footer div contact me */
 
 footer span {
   width: 33%;
@@ -472,6 +480,7 @@ footer figure {
   width: 100%;
 }
 
+/* footer sections become columns upon smaller screens */
 @media screen and (width<1200px) {
   footer figure {
     display: flex;
@@ -519,13 +528,15 @@ button {
   border-radius: 10%;
   margin-top: 3rem;
 }
+
+/* button for the submit page changes cursor and gets larger with a shadow when hovered */
 button:hover {
   box-shadow: 0 0 5px #000 inset;
   transform: scale(1.1);
   cursor: pointer;
 }
 
-/* FOOTER: UL: LINKS */
+/* footer: ul: links */
 footer ul {
   display: flex;
   flex-direction: column;
